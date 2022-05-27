@@ -1,0 +1,46 @@
+
+.row{
+    margin-top: 1rem;
+    padding: 2rem;
+    /* background-color:#ea3d63; */
+    border: 0.5rem dotted #ea3d63;
+    display: flex;
+    align-items: center;
+}
+/* div{
+    background-color:#ea3d63;
+} */
+
+#myname{
+    font-weight: bold;
+    text-align: center;
+}
+
+.titlesection{
+    text-align: center;
+}
+
+/* Estilo de la foto de perfil */
+@media (min-width: 576px){
+    #myphoto{
+        border-radius: 50%;
+        box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem #ea3d63;
+        /* position: absolute;*/
+        /* display: block; */
+    }
+}
+@media (max-width: 575px){
+    #myphoto{
+        border-radius: 50%;
+        box-shadow: 0.1rem 0.1rem 0.2rem 0.1rem #ea3d63;
+        position: relative;
+        /* display: block; */
+      
+    }
+    #myname{
+        margin-top: 1.5rem;
+    }
+}
+/*Colores rosa #dd3c69 #ea3d63 #e93d63 
+          azul #512ea9 #5330a9 #502fa8; 
+          lila #9e3685 #993688 #953588*/
