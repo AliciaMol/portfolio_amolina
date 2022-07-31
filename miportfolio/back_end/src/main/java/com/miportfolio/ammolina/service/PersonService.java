@@ -5,9 +5,11 @@
  */
 package com.miportfolio.ammolina.service;
 
+import com.miportfolio.ammolina.exception.UserNotFoundException;
 import com.miportfolio.ammolina.model.Person;
 import com.miportfolio.ammolina.repository.IPersonRepository;
 import java.util.List;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,7 @@ import org.springframework.stereotype.Service;
  * @author Sisita
  */
 @Service
+@Transactional
 public class PersonService implements IPersonService {
 
     //inyecto la dependencia del repositorio mediante la annotation @AutoWired.
@@ -30,9 +33,9 @@ public class PersonService implements IPersonService {
     }
 
     @Override
-    public void savePerson(Person person) {
+    public Person addPerson(Person person) {
         //Este metodo save crea o modifica los datos de una persona
-        ipersonRepository.save(person);
+        return ipersonRepository.save(person);
     }
 
     @Override
@@ -41,14 +44,13 @@ public class PersonService implements IPersonService {
     }
 
     @Override
-    public Person searchPerson(Long id) {
+    public Person getPersonById(Long id) {
         //si no encuentra la persona, entonces devuelve null
-        return ipersonRepository.findById(id).orElse(null);
+        return ipersonRepository.getPersonById(id).orElseThrow(() -> new UserNotFoundException("User by id " + id + " was not found."));
     }
 
-//    @Override
-//    public Person editPerson(Person perso n) {
-//        return ipersonRepository.save(person);
-//    }
-
+    @Override
+    public Person updatePerson(Person person) {
+        return ipersonRepository.save(person);
+    }
 }

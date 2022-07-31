@@ -6,6 +6,7 @@
 package com.miportfolio.ammolina.repository;
 
 import com.miportfolio.ammolina.model.Person;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,6 +16,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface IPersonRepository extends JpaRepository<Person, Long>{
+    public Optional <Person> getPersonById(Long id);
 }
-/*Le pasamos de que tome de la clase Person, y el tipo de dato que 
+/*Le pasamos que tome de la clase Person, y el tipo de dato que 
 es la primary key que es id, por eso Long*/

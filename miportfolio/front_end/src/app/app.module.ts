@@ -5,26 +5,23 @@ import { HttpClientModule } from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { HeaderbarnavComponent } from './components/headerbarnav/headerbarnav.component';
-import { HeaderbannerComponent } from './components/headerbanner/headerbanner.component';
-import { AboutComponent } from './components/about/about.component';
+import { PersonComponent } from './components/person/person.component';
+import { PersonService } from './components/person/person.service';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
-
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HeaderbarnavComponent,
-    HeaderbannerComponent,
-    AboutComponent,
+    PersonComponent,
     ExperienceComponent,
     EducationComponent,
     SkillsComponent,
@@ -50,9 +47,11 @@ import { LoginComponent } from './components/login/login.component';
       animation: true,
       animationDuration: 300,
     }),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [PersonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

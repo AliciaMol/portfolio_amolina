@@ -10,16 +10,16 @@
                 <li class="col-12 card mb-3">
                     <div class="row g-0">
                         <div class="col-sm-3 d-flex align-items-center">
-                            <div class="edu-img"><img src="../../../assets/images/unc3_c.jpg" alt="Logo de la UNIVERSIDAD NACIONAL DE CORDOBA"
+                            <div class="edu-img"><img src={{education.imageURL}} alt="Logo de la {{education.houseOfStudies}}"
                                     class="img-fluid"></div>
                         </div>
                         <div class="col-sm-9">
                             <div class="card-body">
 
-                                <h2 class="card-title display-6 text-center">Título: Ingeniería en Computación</h2>
-                                <p class="card-text fs-4">Carrera: Ingeniería en Computación. Facultad de Ciencias Exactas, Físicas y Naturales - UNIVERSIDAD NACIONAL DE CORDOBA</p>
+                                <h2 class="card-title display-6 text-center">Título: {{education.title}}</h2>
+                                <p class="card-text fs-4">Carrera: {{education.career}}. {{education.faculty}} - {{education.houseOfStudies}}</p>
                                 <div class="col-sm">
-                                    <p class="fs-4"><span class="fw-bolder">Periodo: </span>En curso</p>
+                                    <p class="fs-4"><span class="fw-bolder">Período: </span>{{education.startDate}} - {{education.endingDate}}</p>
                                 </div>
                             </div>
                         </div>
@@ -37,7 +37,7 @@
                                 <h2 class="card-title display-6 text-center">Título: Bachiller en Ciencias Aplicadas</h2>
                                 <p class="card-text fs-4">Carrera: Ingeniería en Computación. Facultad de Ciencias Exactas, Físicas y Naturales - UNIVERSIDAD NACIONAL DE CORDOBA</p>
                                 <div class="col-sm">
-                                    <p class="fs-4"><span class="fw-bolder">Periodo: </span>2002-2021</p>
+                                    <p class="fs-4"><span class="fw-bolder">Período: </span>2002-2021</p>
                                 </div>
                             </div>
                         </div>
@@ -53,7 +53,7 @@
                 <li class="col-12 card mb-3">
                     <div class="row g-0">
                         <div class="col-sm-3 d-flex align-items-center">
-                            <div class="edu-img"><img src="../../../assets/images/" alt="Logo Instituto P. San Alfonso."
+                            <div class="edu-img"><img src="../../../assets/images/grupal.png" alt="Logo Instituto P. San Alfonso."
                                     class="img-fluid"></div>
                         </div>
                         <div class="col-sm-9">
@@ -62,7 +62,7 @@
                                 <h2 class="card-title display-6 text-center">Título: Bachiller Mercantil</h2>
                                 <p class="card-text fs-4">Instituto P. "San Alfonso." Nº 8088 - Salta Capital</p>
                                 <div class="col-sm">
-                                    <p class="fs-4"><span class="fw-bolder">Periodo: </span>1997-2001</p>
+                                    <p class="fs-4"><span class="fw-bolder">Período: </span>1997-2001</p>
                                 </div>
                             </div>
                         </div>

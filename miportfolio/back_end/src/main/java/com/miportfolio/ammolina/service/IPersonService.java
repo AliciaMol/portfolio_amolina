@@ -15,8 +15,9 @@ import java.util.List;
 public interface IPersonService {
     
     public List<Person>getAllPerson();
-    public void savePerson(Person person);
+    public Person addPerson(Person person);
     public void deletePerson(Long id);
-    public Person searchPerson(Long id);
-//    public Person editPerson(Person person);
+    public Person getPersonById(Long id);
+    public Person updatePerson(Person person);
+    /* Uso save para agregar o editar*/
 }
